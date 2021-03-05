@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BiChevronDown, BiChevronRight } from "react-icons/bi";
 import { ReactComponent as Logo } from "../assets/log.svg";
 import HeaderComp from "./headerComp";
+import { Link} from "react-router-dom";
 
 const Header = () => {
   const [active, setActive] = useState(true);
@@ -20,9 +21,36 @@ const Header = () => {
           Product
           <BiChevronDown className="icon=head" />
         </span>
-        <span>Pricing</span>
-        <span>Enterprise</span>
-        <span>Support</span>
+        <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: "#454545",
+            paddingLeft: "20px",
+          }}
+        >
+          <span>Pricing</span>
+        </Link>
+        <Link
+          to="/SecondPage"
+          style={{
+            textDecoration: "none",
+            color: "#454545",
+            paddingLeft: "20px",
+          }}
+        >
+          <span>Enterprise</span>
+        </Link>
+        <Link
+          to="/thirdPage"
+          style={{
+            textDecoration: "none",
+            color: "#454545",
+            paddingLeft: "20px",
+          }}
+        >
+          <span>Support</span>
+        </Link>
       </div>
       <div className="right-nav">
         <span>Contact Sales</span>
